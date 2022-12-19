@@ -1,11 +1,8 @@
 package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Main {
     /**
@@ -15,7 +12,7 @@ public class Main {
      * Очистка таблицы User(ов)
      * Удаление таблицы
      */
-    private final static UserServiceImpl userService = new UserServiceImpl();
+    private final static UserService userService = new UserServiceImpl();
     public static void main(String[] args) {
         userService.createUsersTable();
 
