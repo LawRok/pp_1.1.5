@@ -17,6 +17,7 @@ public class Util {
             DriverManager.registerDriver(driver);
             */
             connection = DriverManager.getConnection(URL, NAME_USER, PASSWORD);
+            connection.setAutoCommit(false);
             if (!connection.isClosed()) {
                 System.out.println("Connection with DataBase is established!");
             }
